@@ -8,6 +8,8 @@ info:
 tags:
   - name: calculator
     description: Basic arithmetic operations.
+  - name: string-manipulation
+    description: Manipulation of a String
 paths:
   /multiply:
     get:
@@ -65,3 +67,25 @@ paths:
               schema:
                 type: number
               example: 5
+  /upper:
+    get:
+      tags:
+        - string-manipulation
+      summary: Converts string to uppercase.
+      description: Converts the given string to uppercase.
+      operationId: uppercase
+      parameters:
+        - name: string
+          in: path
+          required: true
+          schema:
+            type: string
+            example: halloWelt!
+      responses:
+        '200':
+          description: Successful opperation.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: HALLOWELT!
