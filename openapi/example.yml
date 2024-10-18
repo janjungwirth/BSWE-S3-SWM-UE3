@@ -76,7 +76,7 @@ paths:
       operationId: uppercase
       parameters:
         - name: string
-          in: query
+          in: path
           required: true
           schema:
             type: string
