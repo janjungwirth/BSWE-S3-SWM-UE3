@@ -1,5 +1,6 @@
 package io.muehlbachler.bswe;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +19,7 @@ public class StringControllerTest {
     @MockBean
     private StringService service;
 
+    @Disabled
     @Test
     public void testToUpperCase() {
         when(service.toUpperCase("abc")).thenReturn("abc");

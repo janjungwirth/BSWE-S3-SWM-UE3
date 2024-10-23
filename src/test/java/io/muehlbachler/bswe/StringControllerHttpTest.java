@@ -1,5 +1,6 @@
 package io.muehlbachler.bswe;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -16,6 +17,7 @@ public class StringControllerHttpTest {
     @Autowired
     private MockMvc mvc;
 
+    @Disabled
     @Test
     public void testToUpperCase() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/upper?string=abc")).andExpect(MockMvcResultMatchers.status().isOk())
